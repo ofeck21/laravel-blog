@@ -196,6 +196,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         // Spatie Laravel
         Spatie\Permission\PermissionServiceProvider::class,
+        // custom theme menu provider
+        App\Providers\MenuServiceProvider::class,
 
     ],
 
@@ -211,7 +213,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
+        // custom theme helper
+        'Helper' => App\Helpers\Helpers::class,
     ])->toArray(),
 
 ];
