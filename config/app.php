@@ -198,6 +198,8 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         // custom theme menu provider
         App\Providers\MenuServiceProvider::class,
+        // Log Viewer
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
     ],
 

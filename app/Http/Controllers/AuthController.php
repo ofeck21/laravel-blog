@@ -7,6 +7,7 @@ use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use App\Services\AuthService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -24,6 +25,8 @@ class AuthController extends Controller
      */
     public function login()
     {
+        // check if user is loged in
+        if(Auth::check()) return redirect('/home');
         return view('contents.auth.login');
     }
 

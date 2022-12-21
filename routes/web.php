@@ -27,6 +27,9 @@ Route::get('/', function () {
 })->name('index');
 
 Route::middleware(['auth'])->group(function () {
+    // Log Viewer
+    Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+
     Route::controller(HomeController::class)->group(function(){
         Route::get('/home', 'index')->name('home');
     });
